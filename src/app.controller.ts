@@ -19,4 +19,9 @@ export class AppController {
   error(): string {
     return 'mistake';
   }
+
+  @Get('/service')
+  sayHello2(): string {
+    return this.appService.sayHello2();
+  }
 }
