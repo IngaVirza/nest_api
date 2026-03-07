@@ -23,4 +23,9 @@ export class MoviesService {
   create(movieData) {
     this.movies.push({ id: this.movies.length + 1, ...movieData });
   }
+  patch(id: string, updateData) {
+    const movie = this.getOne(id);
+    this.remove(id);
+    this.movies.push({ ...movie, ...updateData });
+  }
 }
