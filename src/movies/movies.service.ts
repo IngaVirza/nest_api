@@ -18,7 +18,7 @@ export class MoviesService {
   }
   remove(id: string) {
     this.getOne(id);
-    this.movies.filter((movie) => movie.id !== parseInt(id));
+    this.movies = this.movies.filter((movie) => movie.id !== parseInt(id));
   }
   create(movieData) {
     this.movies.push({ id: this.movies.length + 1, ...movieData });
