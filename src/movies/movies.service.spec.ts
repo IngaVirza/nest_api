@@ -19,4 +19,11 @@ describe('MoviesService', () => {
   it('shuold return 4', () => {
     expect(2 + 2).toEqual(4);
   });
+
+  describe('Test function getAll', () => {
+    it('Should return array', () => {
+      const result = service.getAll();
+      expect(result).toBeInstanceOf(Array);
+    });
+  });
 });
