@@ -45,6 +45,7 @@ describe('MoviesService', () => {
         service.getOne(9999);
       } catch (e) {
         expect(e).toBeInstanceOf(NotFoundException);
+        expect(e.message).toEqual(`Film with id: 9999 not found`);
       }
     });
   });
