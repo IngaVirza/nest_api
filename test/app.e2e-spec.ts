@@ -20,6 +20,10 @@ describe('AppController (e2e)', () => {
     return request(app.getHttpServer())
       .get('/')
       .expect(200)
-      .expect('Hello World!');
+      .expect('Welcome in API Data base');
+  });
+
+  it('/movies (GET)', () => {
+    return request(app.getHttpServer()).get('/movies').expect(200).expect([]);
   });
 });
